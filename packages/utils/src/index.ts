@@ -1,1 +1,1 @@
-console.log("Hello via Bun!");
+export const log = console.log("Hello from the utils package!");
