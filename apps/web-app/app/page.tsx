@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [status, setStatus] = useState("Loading...");
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/health")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/health`)
       .then(res => res.json())
       .then(data => setStatus(data.status))
       .catch(err => setStatus("Error: " + err.message));
